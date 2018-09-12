@@ -11,11 +11,11 @@ This repo is to complete an assignment of "[The Node.js Master Class](https://pi
 
 
 
-## Authors
+
+## Author
 
 * **Juan José Paredez** - *Initial work* - [this repo](https://github.com/juanjparedez/ha1.git)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 
 ## License
