@@ -18,11 +18,14 @@ let parsedUrl = url.parse(req.url, true)
 let path = parsedUrl.pathname
 let trimmedPath = path.replace(/^\/+|\/+$/g, '')
 
+// Get the http method
+let methot = req.method.toLowerCase()
+
 // Send the response
 res.end(str)
 
 // Log the requested path
-console.log('Request received on path: '+trimmedPath)
+console.log('Request received on path \"'+trimmedPath+'\" with method \"'+methot+'\"')
 
 })
 
