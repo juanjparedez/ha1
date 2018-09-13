@@ -2,12 +2,28 @@
 
 // Dependencies 
 let http = require('http')
+let url = require('url')
+
+// config
 let str = 'Hello World!\n'
 
 
 // server object
 let server = http.createServer(function(req,res) {
-    res.end(str)
+
+// Getting the url
+let parsedUrl = url.parse(req.url, true)
+
+// Getting the path
+let path = parsedUrl.pathname
+let trimmedPath = path.replace(/^\/+|\/+$/g, '')
+
+// Send the response
+res.end(str)
+
+// Log the requested path
+console.log('Request received on path: '+trimmedPath)
+
 })
 
 // Starting the server
